@@ -1,1 +1,1 @@
-python-daily Wed 21 Jul 2021
+python-daily Sat 28 Aug 2021

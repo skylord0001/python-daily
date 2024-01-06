@@ -3,7 +3,9 @@
 
 This contains a Python script for analyzing and visualizing fruit sales over time. The script uses the Pandas library for data manipulation and Matplotlib for creating plots.
 
-Data analysis is a crucial component in various fields and industries for several reasons. Here's a more detailed explanation of why data analysis is needed:
+Data analysis is a crucial component in various fields and industries for several reasons.
+Check out [django-analyst](https://github.com/devfemibadmus/django-analyst) a software that provide analysis for models in your django project
+Here's a more detailed explanation of why data analysis is needed:
 
 1.  **Informed Decision-Making:**
     

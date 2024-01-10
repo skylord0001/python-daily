@@ -1,5 +1,4 @@
-<details>
-<summary>Welcome Google Cloud Platform</summary>
+# Welcome Google Cloud Platform
 
 Google Cloud Platform stands out for its reliability, scalability, and a wide range of services that support various workloads. Key reasons to choose GCP for deploying python apps include:
 
@@ -44,11 +43,9 @@ Google Cloud Platform provides a versatile environment for deploying python appl
 -   [Google Cloud Codelabs](https://codelabs.developers.google.com/codelabs/cloud-app-engine-python3)
 - [google-cloud-django-settings](https://github.com/devfemibadmus/python-daily/tree/master/gcloud/django/settings.py)
 
-</details>
 
 
-<details>
-<summary>Perform CRUD operation on Google Cloud Storage</summary>
+# Perform CRUD operation on Google Cloud Storage
 
 ```python
 from google.cloud import storage
@@ -124,7 +121,6 @@ read_operation()
 delete_operation()
 read_operation()  # This should indicate that the file is not found after deletion
 ```
-</details>
 
 
 ## References

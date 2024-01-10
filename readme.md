@@ -6,7 +6,7 @@
 
 ## Introduction
 
-When it comes to hosting web applications on a Virtual Private Server (VPS), Apache remains a popular choice among developers and system administrators. This README aims to explore the advantages and disadvantages of using Apache as the web server for hosting Python applications on a VPS. Additionally, a sample Apache configuration file (`app.py`) for a Django project is provided, which can serve as a starting point for other Python web applications.
+When it comes to hosting web applications on a Virtual Private Server (VPS), Apache remains a popular choice among developers and system administrators. This README aims to explore the advantages and disadvantages of using Apache as the web server for hosting Python applications on a VPS. Additionally, a sample Apache configuration file `app.conf` for a Django project is provided, which can serve as a starting point for other Python web applications.
 
 ## Advantages of Apache Hosting on VPS
 
@@ -50,7 +50,56 @@ The provided `app.py` is a sample Apache configuration file tailored for a Djang
 
 ### Usage
 
-1. Copy the `app.py` configuration into your Apache configuration file, typically located at `/etc/apache2/sites-available/`.
+```bash
+<VirtualHost *:80>
+    ServerName domain.com
+    ServerAlias www.domain.com
+
+    RewriteEngine on
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+    RewriteCond %{REQUEST_URI} !^/static/
+    RewriteRule ^(.*)$ https://%{SERVER_NAME}$1 [R,L]
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName domain.com
+    ServerAlias www.domain.com
+
+    Alias /static /home/username/djangoProjectName/static
+    <Directory /home/username/djangoProjectName/static>
+        Require all granted
+    </Directory>
+
+    Alias /media /home/username/djangoProjectName/media
+    Alias /media/media /home/username/djangoProjectName/media
+    <Directory /home/username/djangoProjectName/media>
+        Require all granted
+    </Directory>
+
+    <Directory /home/username/djangoProjectName>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+    </Directory>
+
+    WSGIDaemonProcess djangoProjectName python-path=/home/username/djangoProjectName:/home/username/djangoProjectName/venv/lib/python3.9/site-packages
+    WSGIProcessGroup djangoProjectName
+    WSGIScriptAlias / /home/username/djangoProjectName/raffle/wsgi.py
+
+    WSGIPassAuthorization On
+
+    ErrorLog ${APACHE_LOG_DIR}/djangoProjectName-error.log
+    CustomLog ${APACHE_LOG_DIR}/djangoProjectName-access.log combined
+    Include /etc/letsencrypt/options-ssl-apache.conf
+    SSLCertificateFile /etc/letsencrypt/live/domain.com-0001/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/domain.com-0001/privkey.pem
+</VirtualHost>
+
+```
+
+1. Copy the `app.conf` configuration into your Apache configuration file, typically located at `/etc/apache2/sites-available/`.
 2. Update paths, usernames, and domain names as needed.
 3. If you don't have SSL certificates, you can comment out the lines:
    ```apache
@@ -96,6 +145,9 @@ This contains a Python script for analyzing and visualizing fruit sales over tim
 
 Data analysis is a crucial component in various fields and industries for several reasons.
 Check out [django-analyst](https://github.com/devfemibadmus/python-daily) a software that provide analysis for models in your django project
+
+![Figure_1](data-analysis/Figure_1.png?raw=true)
+
 Here's a more detailed explanation of why data analysis is needed:
 
 1.  **Informed Decision-Making:**
@@ -254,7 +306,9 @@ For example, if you want to know how many apples were sold on January 2, you wou
 # Graph Visualization and Shortest Path Finder(map.py)
 
 This Python script provides a `Graph` class for working with undirected graphs. It includes functionalities to add nodes and edges, find the shortest path between nodes using Dijkstra's algorithm, and visualize the graph using NetworkX and Matplotlib.
+
 ![Figure_1.png](data-structure/Figure_1.png?raw=true)
+
 ## Usage
 
 1.  **Install Dependencies:**
@@ -303,6 +357,7 @@ An example graph is provided in the script. Run the script to visualize the grap
 # Run the script
 python graph_visualization.py
 ```
+![Figure_1.png](data-structure/Figure_1.png?raw=true)
 
 
 
@@ -372,6 +427,7 @@ This Python program implements a simple social media network using the NetworkX 
    ```python
    social_media_network.visualize()
    ```
+![Figure_2.png](data-structure/Figure_2.png?raw=true)
    
 </details>
 <details>

@@ -44,7 +44,7 @@ While configurability is an advantage, it can also lead to complexity, especiall
 
 For users new to web hosting and server management, Apache's extensive feature set and configuration options can present a steep learning curve. It may require time and effort to become proficient in optimizing Apache for specific use cases.
 
-## Sample Apache Configuration (`app.py`)
+## Sample Apache Configuration
 
 The provided `app.py` is a sample Apache configuration file tailored for a Django project. This configuration assumes that the project is structured similarly to the provided Django project structure and can be used as a starting point for other Python web applications. Please review and modify the paths, usernames, and domain names based on your specific setup.
 

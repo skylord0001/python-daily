@@ -504,8 +504,9 @@ read_operation()  # This should indicate that the file is not found after deleti
 -   [Google Cloud Documentation](https://cloud.google.com/python/docs/getting-started)
 -   [Google Cloud Codelabs](https://codelabs.developers.google.com/codelabs/cloud-app-engine-python3)
 - [google-cloud-django](https://github.com/devfemibadmus/python-daily/tree/master/gcloud/django/settings.py)
-<details>
+</details>
 
+<details>
 <summary>SQL University management System</summary>
 
 # University Management System

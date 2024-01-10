@@ -1,6 +1,7 @@
 # Welcome to Python - Daily
 <details>
 <summary>Apache - Configuration</summary>
+
 # Apache Hosting on VPS: Advantages and Disadvantages
 
 ## Introduction
@@ -62,6 +63,7 @@ The provided `app.py` is a sample Apache configuration file tailored for a Djang
 </details>
 <details>
 <summary>Black Stack Hub (from whatsapp group)</summary>
+
 # Welcome to the BlackStackHub Support Code Repository
 
 This repository contains support code for the Python-Daily project. The code here is meant to address reported bugs, provide modifications, and support discussions within our WhatsApp group.
@@ -93,7 +95,7 @@ Happy coding!
 This contains a Python script for analyzing and visualizing fruit sales over time. The script uses the Pandas library for data manipulation and Matplotlib for creating plots.
 
 Data analysis is a crucial component in various fields and industries for several reasons.
-Check out [django-analyst](https://github.com/devfemibadmus/django-analyst) a software that provide analysis for models in your django project
+Check out [django-analyst](https://github.com/devfemibadmus/python-daily) a software that provide analysis for models in your django project
 Here's a more detailed explanation of why data analysis is needed:
 
 1.  **Informed Decision-Making:**
@@ -216,7 +218,7 @@ plt.legend()
 plt.show()
 
 ```
-![Figure_1](data-analysis/Figure_1.png)
+![Figure_1](data-analysis/Figure_1.png?raw=true)
 
 This script reads a CSV file containing fruit sales data and then creates a line plot with markers to visualize the sales trends for each type of fruit over time.
 
@@ -252,7 +254,7 @@ For example, if you want to know how many apples were sold on January 2, you wou
 # Graph Visualization and Shortest Path Finder(map.py)
 
 This Python script provides a `Graph` class for working with undirected graphs. It includes functionalities to add nodes and edges, find the shortest path between nodes using Dijkstra's algorithm, and visualize the graph using NetworkX and Matplotlib.
-![Figure_1.png](Figure_1.png)
+![Figure_1.png](data-structure/Figure_1.png?raw=true)
 ## Usage
 
 1.  **Install Dependencies:**
@@ -311,7 +313,7 @@ python graph_visualization.py
 
 This Python program implements a simple social media network using the NetworkX library. The network allows users to be added, relationships to be formed between them, and provides functionality to find connections, analyze social circles, recommend new connections, and visualize the network.
 
-![Figure_2.png](Figure_2.png)
+![Figure_2.png](data-structure/Figure_2.png?raw=true)
 
 ## Features
 
@@ -374,6 +376,7 @@ This Python program implements a simple social media network using the NetworkX 
 </details>
 <details>
 <summary>Google Cloud</summary>
+
 # Welcome Google Cloud Platform
 
 Google Cloud Platform stands out for its reliability, scalability, and a wide range of services that support various workloads. Key reasons to choose GCP for deploying python apps include:

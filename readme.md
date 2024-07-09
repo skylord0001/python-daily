@@ -1,4 +1,10 @@
 # Welcome to Python - Daily
+
+<details>
+<summary>Web Copy for DJango files</summary>
+Wrote this scripts when dealing with some big files so i decide to store here you can go check out the folder `web-copy`
+</details>
+
 <details>
 <summary>Apache - Configuration</summary>
 
